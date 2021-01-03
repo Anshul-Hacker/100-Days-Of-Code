@@ -1,0 +1,8 @@
+n=int(input("Enter Limit : "))
+print("Enter Elements : ")
+arr=list(map(int,input().split()))
+d=int(input("Enter Difference : "))
+for i in range(d):
+    arr.append(arr[0])
+    del(arr[0])
+print(arr)
