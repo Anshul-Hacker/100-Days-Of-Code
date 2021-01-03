@@ -1,0 +1,10 @@
+n=int(input("Enter Size : "))
+arr = list(map(int,input().split(",")))
+for i in range(n):
+    for j in arr:
+        if (arr[j]==i):
+            arr[j],arr[i]=arr[i],arr[j]
+for i in range(n):
+    if (i!=arr[i]):
+        arr[i]=-1
+print(arr)
