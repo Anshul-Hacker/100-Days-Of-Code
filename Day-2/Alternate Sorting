@@ -1,0 +1,14 @@
+#Alternate Sorting
+
+arr=list(map(int,input().split()))
+n=len(arr)
+
+arr.sort()   #sort() for sorting the array or list directly.
+
+l=(int((n-1)/2))  # for finding lenght till mid element
+
+for i in range(l+1):
+    if(arr[n-1-i]==arr[i]):     #if list conatins odd numbers then only one common number must be printed instead of two.
+        print(arr[i],end=' ')
+    else:
+        print(arr[n-1-i],arr[i],end=" ")
