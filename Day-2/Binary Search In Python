@@ -1,0 +1,29 @@
+#Binary Searching  --> Divide & Conquer Method
+
+arr=list(map(int,input().split()))
+n=len(arr)
+s = int(input("Enter Element To Be Searched : "))
+arr.sort()
+print("Sorted Array : ",arr)
+c=0 
+
+low = 0
+high = n-1
+mid = 0
+
+while(high >= low):
+    mid = (high + low) // 2
+    
+    if s > arr[mid]:
+        low = mid + 1
+        
+    elif s < arr[mid]:
+        high = mid - 1
+        
+    elif arr[mid] == s:
+        c=1
+        print("Element Found At {}th Position In Sorted Format".format(mid))
+        break
+
+if c==0:
+    print("Element Is Not Present In The List.")
