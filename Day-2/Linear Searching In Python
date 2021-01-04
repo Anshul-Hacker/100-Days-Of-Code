@@ -1,0 +1,13 @@
+#Linear Searching
+
+arr = list(map(int,input().split()))
+s = int(input("Enter Element To Be Searched : "))
+c=0
+
+for i in range(len(arr)):
+    if arr[i] == s:
+        print("Element Found At {}th Position".format(i+1))
+        c=1
+
+if c==0:
+    print("Element Is Not Present In The List.")
