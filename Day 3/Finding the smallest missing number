@@ -1,0 +1,9 @@
+# Find the smallest missing number
+arr = list(map(int,input().split()))
+n=int(input())
+m=int(input())
+
+for i in range(m):
+    if i != arr[i]:
+        print(i)
+        break
