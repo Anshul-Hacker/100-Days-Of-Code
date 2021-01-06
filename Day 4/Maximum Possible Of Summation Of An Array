@@ -1,0 +1,17 @@
+#Maximum Possible Of Summation Of An Array
+Complexity - O(n^2)
+
+arr = list(map(int,input().split()))
+l = len(arr)
+
+m = 0 # Taking maximum elemnt as 0
+
+for i in range(l):
+    s =0  
+    for j in range(l):
+        index = (i + j) % l  # Calculating sum of array after 1 single rotation
+        s += arr[index] * j
+    
+    m = max(s,m)
+    
+print(m)
