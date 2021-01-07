@@ -1,0 +1,24 @@
+# Search, Insertion & Deletion In An Array.
+
+arr = list(map(int,input().split()))
+l=len(arr)
+
+ch = int(input("1. Search Element\n2. Insert Element\n3. Delete Element\n"))
+e = int(input("Enter Element"))
+
+if ch == 1:
+    for i in range(l):
+        if arr[i]==e:
+            print("Element Found At {} Position".format(i+1))
+            c=1
+    if c==0:
+        print("Element Is Not Present ")
+
+elif ch==2:
+    arr.append(e)
+    print(arr)
+
+else:
+    index=arr.index(e)
+    del(arr[index])
+    print(arr)
