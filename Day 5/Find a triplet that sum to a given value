@@ -1,0 +1,45 @@
+# Find a triplet that sum to a given value
+
+Method : 1
+
+arr = list(map(int,input().split()))
+l=len(arr)
+
+s = int(input("Enter Sum"))
+c=0
+
+for i in range(l-2):
+    for j in range(i+1,l-1):                         # It's a very naive approach to find triplets as complexity is O(n^3)
+        for k in range(j+1,l):                       # Let's try another approach
+            if arr[i] + arr[j] + arr[k] == s:
+                print(arr[i],arr[j],arr[k])
+                c = 1 
+if c == 0:
+    print("Triplets Not Possible")
+    
+    
+    
+Method : 2
+
+arr = list(map(int,input().split()))
+l = len(arr)
+
+s = int(input("Enter Sum\n"))
+c = 0
+
+arr.sort()
+
+for i in range(l-2):
+    j = i + 1 
+    end = l-1
+    while(j < end):                         # It's a better approach to find triplets as complexity is reduced to O(n^2)
+        if(arr[i] + arr[j] + arr[k] == s):
+            print(arr[i],arr[j],arr[k])
+            c = 1
+            break
+        elif arr[i] + arr[j] + arr[k] < s:
+            j += 1
+        else:
+            end -= 1
+if c == 0:
+    print("Triplets Not Possible")
