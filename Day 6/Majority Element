@@ -1,0 +1,38 @@
+# Majority Element - Time Complexity O(n^2)
+# Approach : 1
+
+n = int(input())
+arr = list(map(int,input().split()))
+
+c= 0
+
+for i in arr:
+    if arr.count(i) > n//2 :
+        print(i)
+        c = 1
+        break
+if c == 0:
+    print(-1)
+    
+    
+# Majority Element - Time Complexity O(n)
+# Approach : 2
+
+from collections import Counter as ct
+
+n = int(input())
+arr = list(map(int,input().split()))
+
+n = n // 2
+c = 0
+
+count = ct(arr)
+
+for i in count:
+    if count[i] > n:
+        print(i)
+        c = 1
+        break
+
+if c == 0:
+    print(-1)
