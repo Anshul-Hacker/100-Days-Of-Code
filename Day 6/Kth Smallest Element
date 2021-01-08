@@ -1,0 +1,9 @@
+# Kth Smallest Element
+
+arr = list(map(int,input().split()))
+
+k = int(input("Enter Kth Smallest Number : \n"))
+
+arr.sort()
+
+print(arr[k-1])
