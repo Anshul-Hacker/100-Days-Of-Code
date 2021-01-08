@@ -1,0 +1,19 @@
+# Missing Number In An Array - Time Complexity O(n)
+# Approach 1 :
+
+n = int(input())
+arr = list(map(int,input().split()))
+
+for i in range(n):
+    if arr[i] != i+1:
+        print(i+1)
+        break
+
+
+# Missing Number In An Array - Time Complexity O(1)
+# Approach 2 :
+
+n = int(input())
+arr = list(map(int,input().split()))
+
+print(n*(n+1)//2 - sum(arr))
