@@ -1,0 +1,12 @@
+# Merge Array Without Extra Space
+
+n = int(input())
+m = int(input())
+arr1 = list(map(int,input().split()))
+arr2 = list(map(int,input().split()))
+
+arr1[:] = sorted(arr1 + arr2)
+del(arr2)
+
+for i in arr1:
+    print(i,end=" ")
