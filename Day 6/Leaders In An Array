@@ -1,0 +1,14 @@
+# Leaders In An Array 
+
+n = int(input())
+arr = list(map(int,input().split()))
+
+m = arr[n-1]
+lst=[m]
+
+for i in range(n-2,-1,-1):
+    if m <= arr[i]:
+        m = arr[i]
+        lst.append(m)
+        
+print(lst[::-1])
