@@ -1,0 +1,9 @@
+# Reversing a string (word to word)
+
+s = input()
+S = s.split('.')
+S.reverse()
+a = ""
+for i in S:
+    a += (i+'.')
+print(a[:-1])
