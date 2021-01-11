@@ -1,0 +1,7 @@
+# Remove Duplicate Elements From String
+# Method 3 :
+
+s = input()
+S = set(s)
+for i in S:
+    print(i,end="")
