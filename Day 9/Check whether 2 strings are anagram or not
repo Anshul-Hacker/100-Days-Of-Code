@@ -1,0 +1,7 @@
+# Check whether 2 strings are anagram or not .
+
+a,b = map(str,input().split())
+if sorted(a) == sorted(b):
+    print("Yes")
+else :
+    print("No")
