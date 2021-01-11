@@ -1,0 +1,9 @@
+# Remove Duplicate Elements From String
+# Method 1 :
+
+s = input()
+str = ''
+for i in s:
+    if i not in str:
+        str = str + i
+print(str)
