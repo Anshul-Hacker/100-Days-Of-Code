@@ -1,0 +1,15 @@
+# Check if string is rotated by two places
+
+def isRotated(s,p):
+    
+    if len(s) != len(p):
+        return 0
+    str = s + s
+    if s == p and len(s) < 2:
+        return 0
+    elif p in str:
+        return 1
+    
+a = input()
+b = input()
+print(isRotated(a,b))
