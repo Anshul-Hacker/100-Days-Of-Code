@@ -1,0 +1,19 @@
+# Longest Distinct characters in string
+
+n = int(input())
+lst = []
+str = ""
+for i in range(n):
+    s = input()
+    j = 0
+    while j < len(s):
+        k = s[j]
+        j += 1
+        if k not in str:
+            str = str + k
+        elif k in str:
+            j -= 1
+            lst.append(len(str))
+            str = ""
+        
+    print(max(lst))
