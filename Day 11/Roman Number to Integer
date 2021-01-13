@@ -1,0 +1,14 @@
+# Roman Number to Integer
+
+str = input()
+str = str.upper()
+d = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+lst = list(str)
+s = 0
+for i in range(len(lst)-1):
+    if ( d[lst[i]] >= d[lst[i+1]] ):
+        s = s + d[lst[i]]
+    else:
+        s = s - d[lst[i]]
+s = s + d[lst[-1]]
+print(s)
