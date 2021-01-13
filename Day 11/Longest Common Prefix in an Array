@@ -1,0 +1,19 @@
+# Longest Common Prefix in an Array
+
+arr = list(map(str,input().split()))
+n = len(arr)
+
+if n == 1:
+    print(arr[0])
+else:
+    arr.sort() 
+    last = min(len(arr[0]), len(arr[n-1])) 
+    i = 0
+    while (i < last and arr[0][i] == arr[n - 1][i]): 
+        i += 1
+        prefix = arr[0][0:i] 
+        
+if len(prefix) == 0:
+    print(-1)
+else:
+    print(prefix)
