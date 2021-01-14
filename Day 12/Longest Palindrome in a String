@@ -1,0 +1,13 @@
+# Longest Palindrome in a String
+
+n = int(input())
+for i in range(n):
+    palin = ''
+    s = input()
+    l = len(s)
+    for i in range(l):
+        for j in range(l,i,-1):
+            st = s[i:j]
+            if st[::-1] == st and len(st) > len(palin):
+                palin = st
+    print(palin)
