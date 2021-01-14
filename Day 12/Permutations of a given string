@@ -1,0 +1,11 @@
+# Permutations of a given string
+
+import itertools as it
+n = int(input())
+for i in range(n):
+    s = input()
+    l = list(it.permutations(s))
+    l.sort()
+    for i in l:
+        print(''.join(i),end=" ")
+    print("\n")
