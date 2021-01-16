@@ -1,0 +1,14 @@
+def optimalKeys(N):
+        
+    screen = [0 for x in range(max(7,N+1))]
+    for n in range(1,7):
+        screen[n] = n
+    for n in range(7,N+1):
+        screen[n] = max(2 * screen[n - 3], 3 * screen[n - 4], 4 * screen[n - 5])
+
+    return screen[N]
+
+t = int(input())
+for i in range(t):
+    n = int(input())
+    print(optimalKeys(n))
