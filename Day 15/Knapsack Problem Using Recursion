@@ -1,0 +1,21 @@
+def knapSack(val, wt, W, curr):
+    
+        if W <= 0 or curr >= len(val):
+            return 0
+        
+        p1 = 0    
+        if wt[curr] <= W:
+            p1 = val[curr] + rec_knap(val, wt, W - wt[curr], curr+1)
+        
+        p2 = rec_knap(val, wt, W, curr+1)
+        
+        return max(p1,p2)
+    
+
+n = int(input())
+val = list(map(int,input().split()))
+wt = list(map(int,input().split()))
+W = int(input())
+
+
+print(knapSack(val, wt, W, 0))
