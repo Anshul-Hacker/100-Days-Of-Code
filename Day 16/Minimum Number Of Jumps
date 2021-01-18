@@ -1,0 +1,21 @@
+# Minimum Number Of Jumps - O(n)
+
+def minimumJumps(arr, n):
+    
+    if arr[0] == 0:
+        return -1
+    j = 0
+    st = 0
+    m = 0
+    for i in range(n):
+        m = max(m,i+arr[i])
+        if i == st and i != n-1:
+            j += 1
+            st = m
+        if arr[i] == 0 and st == i:
+            return -1
+    return j
+
+n = int(input())
+arr = list(map(int,input().split()))
+print(minimumJumps(arr,n))
