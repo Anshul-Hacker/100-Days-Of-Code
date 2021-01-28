@@ -1,0 +1,31 @@
+# Count number of hops - Approach 1 (Recursion)
+# Time Complexity - O(3^n)
+
+def countWays(n):
+    if n == 1 or n == 0:
+        return 1
+    elif n == 2:
+        return 2
+    return countWays(n-1) + countWays(n-2) + countWays(n-3)
+
+
+n = int(input())
+
+print("Total Possoble Ways Are : {}".format(countWays(n)))
+
+
+
+# Count number of hops - Approach 2 (Normal Exectution)
+# Time Complexity - O(n)
+
+n = int(input())
+
+r = [0] * (n+2)
+r[0] = 1
+r[1] = 1
+r[2] = 2
+
+for i in range(3, n+1):
+    r[i] = r[i-1] + r[i-2] + r[i-3]
+    
+print("Total Possoble Ways Are : {}".format(r[n]))
