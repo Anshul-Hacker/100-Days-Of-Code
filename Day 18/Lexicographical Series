@@ -1,0 +1,12 @@
+n = int(input())
+lst = []
+for i in range(1,n+1):
+    lst.append(str(i))
+    
+lst.sort()
+n_lst=[]
+
+for i in range(n):
+    n_lst.append(int(lst[i]))
+    
+print(n_lst)
