@@ -1,0 +1,29 @@
+# Quick Sort : 
+
+def quicksort(lst, a, b) :
+    if a < b :
+        t = a
+        i = a
+        j = b
+        
+        while i < j:
+            while lst[i] <= lst[t] and i < b :
+                i += 1
+            while lst[j] > lst[t] :
+                j -= 1
+            if i < j :
+                lst[i], lst[j] = lst[j], lst[i]
+                
+        lst[t], lst[j] = lst[j], lst[t]
+            
+        quicksort(lst, a, j-1)
+        return quicksort(lst, j+1, b)
+        
+    print(lst)
+        
+    
+                
+n = int(input())
+lst = list(map(int,input().split()))
+
+quicksort(lst, 0, n-1)
